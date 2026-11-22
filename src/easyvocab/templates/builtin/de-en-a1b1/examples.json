@@ -1,0 +1,178 @@
+[
+  {
+    "input": {
+      "word": "Verkehr"
+    },
+    "output": {
+      "word": "Verkehr",
+      "lemma": "Verkehr",
+      "pos": "noun",
+      "article": "der",
+      "plural": "",
+      "genitive": "des Verkehrs",
+      "praesens_3sg": "",
+      "praeteritum": "",
+      "partizip_2": "",
+      "auxiliary": "",
+      "perfekt": "",
+      "separable": false,
+      "reflexive": false,
+      "comparative": "",
+      "superlative": "",
+      "word_en": "traffic",
+      "definition_de": "alle Personen und Fahrzeuge, die sich auf Straßen oder Wegen bewegen",
+      "definition_en": "the vehicles and people moving along roads",
+      "examples": [
+        {
+          "de": "Auf dieser Straße ist immer viel Verkehr.",
+          "en": "There's always a lot of traffic on this road."
+        },
+        {
+          "de": "Der ganze Verkehr kam zum Stillstand.",
+          "en": "All the traffic came to a standstill."
+        }
+      ],
+      "tts_text": "der Verkehr"
+    }
+  },
+  {
+    "input": {
+      "word": "fahren"
+    },
+    "output": {
+      "word": "fahren",
+      "lemma": "fahren",
+      "pos": "verb",
+      "article": "",
+      "plural": "",
+      "genitive": "",
+      "praesens_3sg": "fährt",
+      "praeteritum": "fuhr",
+      "partizip_2": "gefahren",
+      "auxiliary": "sein",
+      "perfekt": "ist gefahren",
+      "separable": false,
+      "reflexive": false,
+      "comparative": "",
+      "superlative": "",
+      "word_en": "to drive, to go",
+      "definition_de": "sich mit einem Fahrzeug von einem Ort zu einem anderen bewegen",
+      "definition_en": "to travel somewhere in a vehicle",
+      "examples": [
+        {
+          "de": "Sollen wir zu Fuß gehen oder fahren?",
+          "en": "Shall we walk or drive?"
+        },
+        {
+          "de": "Ich fahre lieber mit dem Zug als mit dem Bus.",
+          "en": "I'd rather go by train than by bus."
+        }
+      ],
+      "tts_text": "fahren"
+    }
+  },
+  {
+    "input": {
+      "word": "anrufen"
+    },
+    "output": {
+      "word": "anrufen",
+      "lemma": "anrufen",
+      "pos": "verb",
+      "article": "",
+      "plural": "",
+      "genitive": "",
+      "praesens_3sg": "ruft an",
+      "praeteritum": "rief an",
+      "partizip_2": "angerufen",
+      "auxiliary": "haben",
+      "perfekt": "hat angerufen",
+      "separable": true,
+      "reflexive": false,
+      "comparative": "",
+      "superlative": "",
+      "word_en": "to call, to phone",
+      "definition_de": "mit dem Telefon mit jemandem Kontakt aufnehmen",
+      "definition_en": "to contact someone by phone",
+      "examples": [
+        {
+          "de": "Hat jemand für mich angerufen?",
+          "en": "Did anyone call for me?"
+        },
+        {
+          "de": "Ruf mich an, wenn ihr angekommen seid.",
+          "en": "Give me a call when you get there."
+        }
+      ],
+      "tts_text": "anrufen"
+    }
+  },
+  {
+    "input": {
+      "word": "freundlich"
+    },
+    "output": {
+      "word": "freundlich",
+      "lemma": "freundlich",
+      "pos": "adjective",
+      "article": "",
+      "plural": "",
+      "genitive": "",
+      "praesens_3sg": "",
+      "praeteritum": "",
+      "partizip_2": "",
+      "auxiliary": "",
+      "perfekt": "",
+      "separable": false,
+      "reflexive": false,
+      "comparative": "freundlicher",
+      "superlative": "am freundlichsten",
+      "word_en": "friendly",
+      "definition_de": "nett und hilfsbereit im Umgang mit anderen Menschen",
+      "definition_en": "kind and helpful towards other people",
+      "examples": [
+        {
+          "de": "Die Bedienung war wirklich sehr freundlich.",
+          "en": "The waitress was really friendly."
+        }
+      ],
+      "tts_text": "freundlich"
+    }
+  },
+  {
+    "input": {
+      "word": "Bescheid geben"
+    },
+    "output": {
+      "word": "Bescheid geben",
+      "lemma": "jemandem Bescheid geben",
+      "pos": "phrase",
+      "article": "",
+      "plural": "",
+      "genitive": "",
+      "praesens_3sg": "gibt Bescheid",
+      "praeteritum": "gab Bescheid",
+      "partizip_2": "Bescheid gegeben",
+      "auxiliary": "haben",
+      "perfekt": "hat Bescheid gegeben",
+      "separable": false,
+      "reflexive": false,
+      "comparative": "",
+      "superlative": "",
+      "word_en": "to let someone know",
+      "definition_de": "jemanden über etwas informieren",
+      "definition_en": "to tell someone about something they need to know",
+      "examples": [
+        {
+          "de": "Gib mir Bescheid, wenn du zu Hause bist.",
+          "en": "Let me know when you're home."
+        },
+        {
+          "de": "Hast du deinem Chef schon Bescheid gegeben?",
+          "en": "Have you told your boss yet?"
+        }
+      ],
+      "tts_text": "Bescheid geben"
+    }
+  }
+]
