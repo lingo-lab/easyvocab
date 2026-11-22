@@ -1,0 +1,54 @@
+name: de-en-a1b1
+version: "1"
+description: >-
+  German → English for A1–B1 learners: the single most common meaning, full grammar
+  (article, plural, genitive, verb forms, comparison), simple German + English definitions,
+  1–2 natural example sentences, German audio.
+language: de
+
+input_vars: [word]
+input_format: "{word} (hint: {spelling})"
+
+audio:
+  word: tts_text
+  example1: examples.0.de
+  example2: examples.1.de
+
+anki:
+  note_type: German Vocab (easyvocab)
+  card_types:
+    - name: English → German
+      front: front.html
+      back: back.html
+  fields:
+    word_de: lemma
+    headword: "{article} {lemma}"
+    word_audio: audio:word
+    word_en: word_en
+    pos: pos
+    article: article
+    plural: plural
+    genitive: genitive
+    praesens_3sg: praesens_3sg
+    praeteritum: praeteritum
+    partizip_2: partizip_2
+    auxiliary: auxiliary
+    perfekt: perfekt
+    separable: separable
+    reflexive: reflexive
+    comparative: comparative
+    superlative: superlative
+    definition_en: definition_en
+    definition_de: definition_de
+    example1_de: examples.0.de
+    example1_en: examples.0.en
+    example1_audio: audio:example1
+    example2_de: examples.1.de
+    example2_en: examples.1.en
+    example2_audio: audio:example2
+    source_word: word
+  tags: [german]
+  tags_from: [pos]
+  flag_tags:
+    separable: trennbar
+    reflexive: reflexiv

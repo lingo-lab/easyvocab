@@ -3,12 +3,133 @@ name = "easyvocab"
 version = "0.1.0"
 description = "Build Anki vocabulary decks with LLMs: templates, TTS, exporters"
 readme = "README.md"
-authors = [
-    { email = "rodionkhvorostov@gmail.com" }
-]
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Rodion Khvorostov" }]
 requires-python = ">=3.12"
-dependencies = []
+keywords = ["anki", "flashcards", "vocabulary", "llm", "language-learning", "spaced-repetition"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Education",
+    "Typing :: Typed",
+]
+dependencies = [
+    "httpx>=0.28.1",
+    "jsonschema>=4.26.0",
+    "openai>=3.57.0",
+    "pydantic>=2.14.4",
+    "pydantic-settings>=2.16.3",
+    "pyyaml>=6.0.4",
+]
+
+[project.optional-dependencies]
+tts = [
+    "gtts>=2.5.4",
+    "tenacity>=9.2.1",
+]
+anki = [
+    "genanki>=0.13.1",
+]
+all = ["easyvocab[tts,anki]"]
+
+[project.urls]
+Homepage = "https://github.com/lingo-lab/easyvocab"
+Repository = "https://github.com/lingo-lab/easyvocab"
+Documentation = "https://lingo-lab.github.io/easyvocab/"
+Changelog = "https://github.com/lingo-lab/easyvocab/blob/main/CHANGELOG.md"
+
+[dependency-groups]
+dev = [
+    "deptry>=0.25.1",
+    "inline-snapshot>=0.37.0",
+    "pre-commit>=4.7.0",
+    "pytest>=9.2.0",
+    "pytest-cov>=7.1.0",
+    "respx>=0.23.1",
+    "ruff>=0.17.6",
+    "ty>=0.0.107",
+    "types-jsonschema>=4.26.0.20261006",
+    "types-pyyaml>=6.0.12.20261113",
+]
+docs = [
+    "mkdocs-material>=9.8.2",
+    "mkdocstrings[python]>=1.0.8",
+]
 
 [build-system]
-requires = ["uv_build>=0.11.25,<0.12.0"]
+requires = ["uv_build>=0.11,<0.12"]
 build-backend = "uv_build"
+
+[tool.ty.environment]
+python-version = "3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]
+addopts = "-m 'not live'"
+markers = ["live: calls real APIs and needs API keys"]
+filterwarnings = ["ignore:.asyncio.iscoroutinefunction. is deprecated:DeprecationWarning:cached_property"]
+
+[tool.coverage.run]
+branch = true
+source = ["src"]
+
+[tool.coverage.report]
+skip_empty = true
+exclude_also = ["if TYPE_CHECKING:", "raise NotImplementedError", "\\.\\.\\."]
+
+[tool.deptry]
+known_first_party = ["easyvocab"]
+
+[tool.deptry.per_rule_ignores]
+# Optional extras are imported lazily via importlib (easyvocab._optional), so deptry can't see them.
+DEP002 = ["gtts", "tenacity", "genanki", "easyvocab"]  # easyvocab: the `all` extra refers to itself
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E", "W", "F",  # pycodestyle + pyflakes
+    "I",            # isort
+    "UP",           # pyupgrade
+    "B",            # bugbear
+    "C4",           # comprehensions
+    "SIM",          # simplify
+    "RUF",          # ruff-specific
+    "S",            # bandit
+    "TRY",          # exception hygiene
+    "C90",          # mccabe complexity
+    "PTH",          # pathlib over os.path
+    "T20",          # no print() in the library
+    "PT",           # pytest style
+    "N",            # naming
+    "D",            # docstrings
+    "TID",          # tidy imports
+    "ERA",          # commented-out code
+]
+ignore = ["E501", "D100", "D104", "D105", "D107", "TRY003"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.mccabe]
+max-complexity = 8
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "D", "T20", "S106", "RUF001"]
+"examples/**" = ["T20", "D"]
+
+[tool.ruff.format]
+docstring-code-format = true

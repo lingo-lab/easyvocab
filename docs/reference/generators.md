@@ -1,0 +1,3 @@
+# Generators
+
+::: easyvocab.generators

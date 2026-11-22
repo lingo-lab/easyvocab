@@ -1,0 +1,71 @@
+site_name: easyvocab
+site_description: Build Anki vocabulary decks with LLMs
+site_url: https://lingo-lab.github.io/easyvocab
+repo_url: https://github.com/lingo-lab/easyvocab
+repo_name: lingo-lab/easyvocab
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+  - How I learn words: how-i-learn-words.md
+  - Templates: templates.md
+  - Extending: extending.md
+  - API reference:
+      - Overview: reference/index.md
+      - Templates: reference/templates.md
+      - LLMs: reference/llm.md
+      - Generators: reference/generators.md
+      - TTS: reference/tts.md
+      - Exporters: reference/exporters.md
+      - Pipeline: reference/pipeline.md
+      - Errors: reference/errors.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: google
+            show_source: false
+            members_order: source
+            separate_signature: true
+            show_signature_annotations: true
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/lingo-lab/easyvocab
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/easyvocab
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - toc:
+      permalink: true

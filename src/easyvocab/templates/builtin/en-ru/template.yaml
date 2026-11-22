@@ -1,0 +1,31 @@
+name: en-ru
+version: "1"
+description: >-
+  English → Russian: the most common, straightforward meaning, a simple English definition,
+  one short example with a natural Russian translation, English audio. Two cards per word
+  (Russian → English and English → Russian).
+language: en
+
+input_vars: [word, context]
+input_format: "{word} (context: {context})"
+
+audio:
+  word: word
+
+anki:
+  note_type: English Vocab (easyvocab)
+  card_types:
+    - name: Russian → English
+      front: ru_en_front.html
+      back: ru_en_back.html
+    - name: English → Russian
+      front: en_ru_front.html
+      back: en_ru_back.html
+  fields:
+    word: word
+    word_audio: audio:word
+    definition: definition
+    example: example
+    word_ru: word_ru
+    example_ru: example_ru
+  tags: [english]

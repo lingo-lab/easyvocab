@@ -1,0 +1,37 @@
+{{FrontSide}}
+
+<hr id=answer>
+
+<div class="de">{{headword}}</div>
+{{word_audio}}
+
+<!-- Grammar line: only the forms that exist are shown, separated by " · " (see style.css). -->
+<div class="grammar">
+  {{#article}}{{#plural}}<span>{{plural}}</span>{{/plural}}{{^plural}}<span>nur Singular</span>{{/plural}}{{/article}}
+  {{#praesens_3sg}}<span>{{praesens_3sg}}</span>{{/praesens_3sg}}
+  {{#praeteritum}}<span>{{praeteritum}}</span>{{/praeteritum}}
+  {{#perfekt}}<span>{{perfekt}}</span>{{/perfekt}}
+  {{#comparative}}<span>{{comparative}}</span>{{/comparative}}
+  {{#superlative}}<span>{{superlative}}</span>{{/superlative}}
+</div>
+{{#separable}}<span class="tag">trennbar</span>{{/separable}}
+{{#reflexive}}<span class="tag">reflexiv</span>{{/reflexive}}
+
+<!-- Autoplay stops here: everything below plays only on click. -->
+<div style="display:none">[sound:_LongSilence.mp3]</div>
+
+<hr>
+
+{{#example1_de}}
+<div class="example">{{example1_de}} {{example1_audio}}</div>
+<div class="example-en">{{hint:example1_en}}</div>
+{{/example1_de}}
+
+{{#example2_de}}
+<div class="example">{{example2_de}} {{example2_audio}}</div>
+<div class="example-en">{{hint:example2_en}}</div>
+{{/example2_de}}
+
+{{#definition_de}}
+<div class="hint-line">{{hint:definition_de}}</div>
+{{/definition_de}}

@@ -1,0 +1,41 @@
+[
+  {
+    "input": {
+      "word": "close",
+      "context": "guideword: , level: B1, pos: verb, topic:"
+    },
+    "output": {
+      "word": "close",
+      "definition": "to change from being open to not being open",
+      "example": "Close the door",
+      "word_ru": "закрыть",
+      "example_ru": "Закрой дверь"
+    }
+  },
+  {
+    "input": {
+      "word": "tackle",
+      "context": "guideword: DEAL WITH, level: B2, pos: verb, topic:"
+    },
+    "output": {
+      "word": "tackle",
+      "definition": "to deal with or attempt to solve a problem",
+      "example": "We need to tackle this issue.",
+      "word_ru": "решать, заниматься",
+      "example_ru": "Нам нужно решить эту проблему."
+    }
+  },
+  {
+    "input": {
+      "word": "overwhelming",
+      "context": "guideword: EMOTION, level: C1, pos: adjective, topic:"
+    },
+    "output": {
+      "word": "overwhelming",
+      "definition": "very intense or powerful, difficult to deal with because of strength or amount",
+      "example": "The response was overwhelming.",
+      "word_ru": "подавляющий, огромный",
+      "example_ru": "Ответ был подавляющим."
+    }
+  }
+]
